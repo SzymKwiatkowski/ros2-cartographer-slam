@@ -23,11 +23,10 @@ from launch.substitutions import PathJoinSubstitution
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 
-pkg_prefix = FindPackageShare('cartographer_demo')
+pkg_prefix = FindPackageShare('ros2_cartographer_mapping')
 
 
 def launch_setup(context, *args, **kwargs):
-    # pkg_prefix = FindPackageShare('cartographer_demo')
     rviz_config = PathJoinSubstitution(
         [pkg_prefix, 'rviz', LaunchConfiguration('rviz_config')])
     
